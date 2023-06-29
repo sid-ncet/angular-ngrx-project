@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "title": "holy-book-34",
+      "author": "krishna",
+      "cost": 45,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "author": "key23",
+      "title": "book2",
+      "cost": 44
+    },
+    {
+      "title": "bible",
+      "author": "james",
+      "cost": 67,
+      "id": 5
+    },
+    {
+      "title": "keyboard1",
+      "author": "key",
+      "cost": 111,
+      "id": 6
+    },
+    {
+      "title": "playing",
+      "author": "sachin",
+      "cost": 12,
+      "id": 7
+    }
+  ]
+}

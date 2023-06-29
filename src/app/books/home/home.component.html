@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/add-book">Add Book</a>
+        </li>
+      
+      
+    
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <legend>show all books</legend>
+    <table>
+        
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">cost</th>
+            <th>delete</th>
+            <th>edit</th>
+          </tr>
+       
+          <tr *ngFor="let book of books |async">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.cost}}</td>
+            <!-- <td><button type="submit" routerLink="/add-book">Add-book</button></td> -->
+            <td><button type="submit" (click)="deleteBook(book)">delete</button></td>
+            <td><button type="submit"[routerLink]="['/edit-book', book.id]">edit-book</button>
+          </tr>
+         
+       
+    </table>
+</div>

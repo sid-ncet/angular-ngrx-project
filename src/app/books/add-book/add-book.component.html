@@ -1,0 +1,19 @@
+<div class="container">
+  <legend>Add a new book</legend>
+<form #myForm="ngForm">
+    <div class="mb-3">
+      <label>title</label>
+      <input type="text" class="form-control" name="title" ngModel required>
+      
+    </div>
+    <div class="mb-3">
+      <label class="form-label">author</label>
+      <input type="text" class="form-control" name="author" ngModel required>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">cost</label>
+        <input type="number" class="form-control" name="cost" ngModel required>
+      </div>
+    <button type="submit" class="btn btn-primary"(click)=submitForm(myForm.value)>Submit</button>
+  </form>
+  </div>
